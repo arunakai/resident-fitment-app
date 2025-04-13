@@ -1,0 +1,8 @@
+streamlit
+requests
+flask
+flask-cors
+pdfplumber
+scikit-learn
+pandas
+numpy
