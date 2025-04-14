@@ -4,7 +4,7 @@ import pdfplumber
 import re
 
 # Your Flask backend endpoint (running locally)
-FLASK_API_URL = "https://resident-fitment-api.onrender.com/predict"
+FLASK_API_URL = os.getenv("FLASK_API_URL", "https://resident-fitment-api.onrender.com/predict")
 
 # Function to extract values from a structured PDF
 def extract_pdf_data(uploaded_file):
