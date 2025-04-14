@@ -49,7 +49,6 @@ def extract_pdf_data(uploaded_file):
 
 # ---- UI Starts Here ----
 
-st.set_page_config(page_title="Resident Fitment Evaluation", layout="centered")
 st.title("🏥 Resident Application Fitment Evaluation (Burton Manor)")
 st.markdown("Evaluate LTC resident fitment based on application details.")
 
