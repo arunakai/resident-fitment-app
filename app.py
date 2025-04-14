@@ -4,6 +4,9 @@ import requests
 import pdfplumber
 import re
 
+# ✅ Must be the first Streamlit call
+st.set_page_config(page_title="Resident Fitment Evaluation", layout="centered")
+
 # 🔐 Password protection
 PASSWORD = os.getenv("STREAMLIT_PASSWORD", "ltcadmin123")  # Default fallback
 st.title("🔒 Resident Fitment Evaluation")
