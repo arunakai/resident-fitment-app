@@ -4,6 +4,16 @@ import requests
 import pdfplumber
 import re
 
+# 🔐 Password protection
+PASSWORD = os.getenv("STREAMLIT_PASSWORD", "ltcadmin123")  # Default fallback
+st.title("🔒 Resident Fitment Evaluation")
+
+entered_password = st.text_input("Enter access password:", type="password")
+
+if entered_password != PASSWORD:
+    st.warning("🚫 Invalid password. Please try again.")
+    st.stop()
+
 # Your Flask backend endpoint (running locally)
 FLASK_API_URL = os.getenv("FLASK_API_URL", "https://resident-fitment-api.onrender.com/predict")
 
